@@ -1,0 +1,45 @@
+import { RouteObject } from "react-router-dom";
+
+export const ROUTES = {
+  AUTH: {
+    SIGNIN: "/auth/signin",
+    SIGNUP: "/auth/signup"
+  },
+  DASHBOARD: "/dashboard",
+  STATISTICS: "/statistics",
+  PROFILE: "/profile",
+  CALENDAR: "/calendar",
+  EVENTS: {
+    LIST: "/events",
+    DETAILS: "/events/:id",
+    EDIT: "/events/:id/edit"
+  },
+  FORMATIONS: {
+    LIST: "/formations",
+    ADD: "/formations/add",
+    EDIT: "/formations/edit/:id",
+    DETAILS: "/formations/:id"
+  },
+  UI: {
+    GALLERY: "/gallery",
+    TABLES: "/basic-tables",
+    ALERTS: "/alerts",
+    AVATARS: "/avatars",
+    BADGES: "/badges",
+    BUTTONS: "/buttons",
+    IMAGES: "/images",
+    VIDEOS: "/videos"
+  },
+  USERS: {
+    STUDENT: "/student/:id",
+    INSTRUCTOR: "/instructor/:id",
+    SUPERVISION: "/instructor-supervision"
+  },
+  ENROLLMENTS: "/enrollments",
+  PAYMENTS: "/payments",
+  CERTIFICATES: {
+    LIST: "/certificates",
+    QUIZ_LIST: "/certificates/quiz-list"
+  },
+  ARCHIVES: "/archives"
+} as const; 

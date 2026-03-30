@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+.certificate-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(45deg, #f9f9f9, #ffffff);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.certificate {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.414/1;
+  padding: 3rem;
+  background-color: #fff;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(200, 200, 200, 0.05) 0%, transparent 100%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%);
+  background-size: 100% 100%, 60px 60px, 60px 60px;
+  border: 2px solid #8b7355;
+}
+
+.certificate::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid #8b7355;
+  pointer-events: none;
+}
+
+.certificate::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #d4af37;
+  pointer-events: none;
+}
+
+.certificate-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.certificate-title {
+  font-size: 3.5rem;
+  color: #2c3e50;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.certificate-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.certificate-subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+}
+
+.certificate-name {
+  font-size: 2.8rem;
+  font-family: 'Great Vibes', cursive;
+  color: #2c3e50;
+  margin-top: -25px;
+  margin-bottom: 2rem;
+  padding: 1rem 4rem;
+  position: relative;
+  text-align: center;
+}
+
+.certificate-name::before,
+.certificate-name::after {
+  content: '❦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d4af37;
+  font-size: 1.5rem;
+}
+
+.certificate-name::before {
+  left: 1rem;
+}
+
+.certificate-name::after {
+  right: 1rem;
+}
+
+.certificate-text {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 80%;
+  line-height: 1.8;
+  margin-top: -40px;
+  margin-bottom: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.certificate-date {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: -7px;
+  margin-bottom: 1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+.certificate-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: -40px;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.signature-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  position: relative;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.signature-line::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8b7355, transparent);
+  position: absolute;
+  top: 0;
+}
+
+.signature-title {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.signature-name {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.certificate-seal {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seal-content {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #fff, #f9f9f9);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  position: relative;
+}
+
+.seal-content::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+}
+
+.company-info {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-top: -10px;
+  line-height: 1.4;
+}
+
+.certificate-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-generate {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-generate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-back {
+  background: transparent;
+  color: #666;
+  border: 2px solid #666;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-back:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Coins décoratifs */
+.certificate-corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+}
+
+.corner-top-left {
+  top: 10px;
+  left: 10px;
+  border-top: 3px solid #8b7355;
+  border-left: 3px solid #8b7355;
+}
+
+.corner-top-right {
+  top: 10px;
+  right: 10px;
+  border-top: 3px solid #8b7355;
+  border-right: 3px solid #8b7355;
+}
+
+.corner-bottom-left {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 3px solid #8b7355;
+  border-left: 3px solid #8b7355;
+}
+
+.corner-bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 3px solid #8b7355;
+  border-right: 3px solid #8b7355;
+}
+
+@media print {
+  .certificate-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .certificate {
+    border: none;
+  }
+
+  .certificate-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate {
+    padding: 1.5rem;
+  }
+
+  .certificate-title {
+    font-size: 2.5rem;
+  }
+
+  .certificate-name {
+    font-size: 2.2rem;
+    padding: 1rem 2rem;
+  }
+
+  .certificate-text {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .certificate-footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .signature-line {
+    min-width: 150px;
+  }
+} 

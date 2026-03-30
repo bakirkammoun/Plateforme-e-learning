@@ -1,0 +1,162 @@
+.dashboard {
+  width: 267px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Classe spécifique pour la page index3 */
+.dashboard.index3 {
+  top: 0;
+  height: 100vh;
+}
+
+.dashboardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dashboardHeader {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logoContainer {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dashboardHeader h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+.dashboardNav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.dashboardNavItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dashboardNavItem:hover {
+  background: #f0f0f0;
+}
+
+.dashboardNavItem.active {
+  background: #0d6efd;
+  color: white;
+}
+
+.icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.submenu.show {
+  display: block;
+}
+
+.submenuItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #666;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.submenuItem:hover {
+  background: #f0f0f0;
+  color: #0d6efd;
+}
+
+.submenuItem.active {
+  background: #e6f0ff;
+  color: #0d6efd;
+}
+
+.submenuIcon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.submenuText {
+  flex: 1;
+}
+
+.notificationBadge {
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: auto;
+    margin-bottom: 20px;
+  }
+} 
